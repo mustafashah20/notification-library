@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TestLibModule } from 'xg-notification-lib';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NotifyModule } from 'ms-notify'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -20,7 +19,7 @@ import { NotificationListComponent } from './components/notification-list/notifi
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    TestLibModule,
+    NotifyModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     HttpClientModule

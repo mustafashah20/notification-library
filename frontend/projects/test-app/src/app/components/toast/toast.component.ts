@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TestLibService } from 'xg-notification-lib';
+import { NotifyService } from 'ms-notify';
 import { NotificationService } from '../../services/notification.service';
 import { Notification } from '../../interfaces/notification';
 import { Subject } from 'rxjs';
@@ -17,7 +17,7 @@ export class ToastComponent implements OnInit {
   userId: string = '';
 
   constructor(
-    private ntLibService: TestLibService,
+    private notifyService: NotifyService,
     private router: Router,
     private notificationService: NotificationService
   ) {}
@@ -32,7 +32,7 @@ export class ToastComponent implements OnInit {
   }
 
   clearAll = () => {
-    this.ntLibService.clearAllNotifications();
+    this.notifyService.clearAllNotifications();
   };
 
   addNotification = () => {
@@ -40,7 +40,7 @@ export class ToastComponent implements OnInit {
       alert('Input header & body content for notification!');
       return;
     }
-    this.ntLibService.addNotification(
+    this.notifyService.addNotification(
       this.notificationCategory,
       this.headerContent,
       this.bodyContent
@@ -62,7 +62,7 @@ export class ToastComponent implements OnInit {
   };
 
   changePosition = (e: any) => {
-    this.ntLibService.changePosition(e.target.value);
+    this.notifyService.changePosition(e.target.value);
   };
 
   changeCategory = (e: any) => {
@@ -70,6 +70,6 @@ export class ToastComponent implements OnInit {
   };
 
   changeTimout = (e: any) => {
-    this.ntLibService.changeTimeout(e.target.value);
+    this.notifyService.changeTimeout(e.target.value);
   };
 }

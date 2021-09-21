@@ -16,4 +16,4 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NotifyComponent
   ]
 })
-export class TestLibModule { }
+export class NotifyModule { }

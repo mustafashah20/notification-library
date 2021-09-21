@@ -5,7 +5,7 @@ import { Notification } from './notification.model';
 @Injectable({
   providedIn: 'root',
 })
-export class TestLibService {
+export class NotifyService {
   notificationStatus: boolean = false;
   notificationStatusChanged = new Subject<boolean>();
   notificationsChanged = new Subject<Notification[]>();

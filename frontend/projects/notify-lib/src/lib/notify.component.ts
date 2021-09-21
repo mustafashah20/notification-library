@@ -7,7 +7,7 @@ import {
 } from '@angular/animations';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Notification } from './notification.model';
-import { TestLibService } from './notify.service';
+import { NotifyService } from './notify.service';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -186,7 +186,7 @@ export class NotifyComponent implements OnInit {
   position = 'top-right';
   faTimes = faTimes;
 
-  constructor(private libService: TestLibService) {}
+  constructor(private libService: NotifyService) {}
 
   ngOnInit(): void {
     this.libService.notificationStatusChanged.subscribe(

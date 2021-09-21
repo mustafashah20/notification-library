@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotifyComponent } from './notify.component';
 
-describe('TestLibComponent', () => {
+describe('NotifyComponent', () => {
   let component: NotifyComponent;
   let fixture: ComponentFixture<NotifyComponent>;
 
