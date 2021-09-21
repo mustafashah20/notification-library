@@ -1,0 +1,48 @@
+.my-link{
+    text-decoration: none;
+}
+
+.outer-wrapper{
+    height: 100vh;
+    width: 100%;
+    padding: 5%;
+}
+
+.outer{
+    background-color: #a9a5fa;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.inner-left{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.inner-right{
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+img{
+    max-height: 100%;
+    max-width: 85%
+}
+
+.col-wrapper{
+    margin: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.custom{
+    flex-grow: 1;
+}
+
+.my-button {
+    background: #6C63FF !important;
+    border: none !important;
+}

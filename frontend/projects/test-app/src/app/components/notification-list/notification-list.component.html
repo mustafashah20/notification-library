@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col">
+    <table class="table table-bordered table-light" *ngIf="showList">
+      <thead>
+        <tr>
+          <th>Header</th>
+          <th>Body</th>
+          <th>Category</th>
+          <th class="custom-width-cell-heading">Edit</th>
+          <th class="custom-width-cell-heading">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let notification of notifications">
+          <td>{{ notification.headerContent }}</td>
+          <td>{{ notification.bodyContent }}</td>
+          <td>{{ notification.category }}</td>
+          <td class="custom-width-cell">
+            <fa-icon [ngStyle]="{ 'color': 'blue' }" [icon]="faEdit"></fa-icon>
+          </td>
+          <td class="custom-width-cell">
+            <fa-icon [ngStyle]="{ 'color': 'red' }" [icon]="faTrash"></fa-icon>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="div" *ngIf="!showList">
+      <div class="row d-flex justify-content-center mt-3">
+        <div class="col-auto">
+          <p class="h5">
+            <strong>No notifications to display!</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

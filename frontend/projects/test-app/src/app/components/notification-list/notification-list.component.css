@@ -1,0 +1,9 @@
+.custom-width-cell {
+  width: 8% !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.custom-width-cell-heading {
+  text-align: center;
+}

@@ -1,0 +1,139 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-auto">
+      <div class="row d-flex justify-content-center mt-1">
+        <div class="col">
+          <p class="h5">Header Content</p>
+          <input type="text" class="form-control" [(ngModel)]="headerContent" />
+          <p class="h5 mt-3">Body Content</p>
+          <input type="text" class="form-control" [(ngModel)]="bodyContent" />
+          <p class="h5 mt-3">Timeout</p>
+          <input
+            type="number"
+            class="form-control"
+            value="5000"
+            (change)="changeTimout($event)"
+          />
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-3">
+        <div class="col">
+          <p class="h5 mt-1">Select Category</p>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="category"
+              id="info"
+              value="info"
+              checked
+              (change)="changeCategory($event)"
+            />
+            <label class="form-check-label" for="bottom-right">Info </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="category"
+              id="warning"
+              value="warning"
+              (change)="changeCategory($event)"
+            />
+            <label class="form-check-label" for="bottom-right">Warning </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="category"
+              id="danger"
+              value="danger"
+              (change)="changeCategory($event)"
+            />
+            <label class="form-check-label" for="bottom-right">Danger </label>
+          </div>
+        </div>
+        <div class="col">
+          <p class="h5 mt-1">Select Position</p>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="position"
+              id="top-right"
+              value="top-right"
+              checked
+              (change)="changePosition($event)"
+            />
+            <label class="form-check-label" for="top-right">Top Right </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="position"
+              id="bottom-right"
+              value="bottom-right"
+              (change)="changePosition($event)"
+            />
+            <label class="form-check-label" for="bottom-right"
+              >Bottom Right
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="position"
+              id="top-left"
+              value="top-left"
+              (change)="changePosition($event)"
+            />
+            <label class="form-check-label" for="top-left">Top Left </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="position"
+              id="bottom-left"
+              value="bottom-left"
+              (change)="changePosition($event)"
+            />
+            <label class="form-check-label" for="bottom-left"
+              >Bottom Left
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-between mt-3">
+        <div class="col-auto">
+          <button
+            type="button"
+            class="btn btn-primary btn-block m-1"
+            (click)="addNotification()"
+          >
+            Toast Notification
+          </button>
+        </div>
+        <div class="col-auto">
+          <div class="col-auto">
+            <button
+              type="button"
+              class="btn btn-danger btn-block m-1"
+              (click)="clearAll()"
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

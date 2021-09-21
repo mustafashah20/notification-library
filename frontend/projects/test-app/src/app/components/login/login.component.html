@@ -1,0 +1,48 @@
+<div class="container outer-wrapper">
+    <div class="outer">
+        <div class="row w-100 h-100 m-0">
+            <div class="col-5 inner-left d-flex align-items-center">
+                <div class="wrapper w-100 justify-content-center d-flex">
+                    <img class="svg-image" src="../../../assets/svgs/notification.svg" alt="temp-svg">
+                </div>
+            </div>
+            <div class="col-7 inner-right d-flex align-items-center">
+                <div class="wrapper w-100 col-wrapper">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <h3>
+                                <strong>Login</strong>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <form (ngSubmit)="onClickLogin()">
+                                <div class="mb-3">
+                                    <label for="InputUsername" class="form-label">Username</label>
+                                    <input type="username" name="username" [(ngModel)]="username" class="form-control"
+                                        id="InputUsername" aria-describedby="usernameHelp" autocomplete="current-username">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="InputPassword" class="form-label">Password</label>
+                                    <input type="password" name="password" [(ngModel)]="password" class="form-control"
+                                        id="InputPassword" autocomplete="current-password">
+                                </div>
+                                <div class="row justify-content-center align-items-center mb-3 custom">
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary my-button">Login</button>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-auto">
+                                        Need an account? <a routerLink="/register" class="my-link">Sign Up Here</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
